@@ -6,7 +6,7 @@
 /*   By: apeposhi <apeposhi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 14:29:00 by apeposhi          #+#    #+#             */
-/*   Updated: 2022/11/02 11:52:24 by apeposhi         ###   ########.fr       */
+/*   Updated: 2022/11/02 18:50:38 by apeposhi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_bzero(void *s, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		thestr[i] = '\0';
+		thestr[i] = 0;
 		i++;
 	}
 }
