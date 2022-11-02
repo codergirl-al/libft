@@ -6,7 +6,7 @@
 /*   By: apeposhi <apeposhi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 14:49:48 by apeposhi          #+#    #+#             */
-/*   Updated: 2022/11/02 15:50:57 by apeposhi         ###   ########.fr       */
+/*   Updated: 2022/11/02 18:26:17 by apeposhi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strdup(const char *s)
 {
-	size_t		len;
-	size_t		i;
+	size_t	len;
+	size_t	i;
 	char	*s2;
 
 	len = ft_strlen(s);
