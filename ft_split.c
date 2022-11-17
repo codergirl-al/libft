@@ -1,20 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: apeposhi <apeposhi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/25 18:52:47 by apeposhi          #+#    #+#             */
-/*   Updated: 2022/11/17 00:19:37 by apeposhi         ###   ########.fr       */
+/*   Created: 2022/11/17 03:43:56 by apeposhi          #+#    #+#             */
+/*   Updated: 2022/11/17 12:47:53 by apeposhi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h" 
+#include "libft.h"
 
-// void    ft_lstdelone(t_list *lst, void (*del)(void *))
-// {
-//     if (!lst || !del)
-//         return ;
-//     del((void *)lst);
-// }
+char	**ft_split(char const *s, char c)
+{
+	size_t	i;
+	size_t	j;
+	size_t	k;
+	char	**arr[ft_strlen(s)];
+
+	i = 0;
+	k = 0;
+	while (i < ft_strlen(s))
+	{
+		if (ft_strchr(s, i))
+			i++;
+		else
+		{
+			j = i;
+			while (j < ft_strlen(s))
+			{
+				if (s[j] == c)
+				{
+					(char *)(arr + k) = ft_substr(s, i, j - i + 1);
+					k++;
+				}
+				j++;
+			}
+		}
+		i++;
+	}
+	return arr;
+}
