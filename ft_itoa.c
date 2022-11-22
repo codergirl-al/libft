@@ -6,37 +6,55 @@
 /*   By: apeposhi <apeposhi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/20 15:52:17 by apeposhi          #+#    #+#             */
-/*   Updated: 2022/11/20 16:37:41 by apeposhi         ###   ########.fr       */
+/*   Updated: 2022/11/22 13:09:33 by apeposhi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static int	num_of_char(int n)
+{
+	int				i;
+	unsigned int	number;
+
+	i = 1;
+	number = n;
+	if (n < 0)
+	{
+		i = 2;
+		number = -n;
+	}
+	while (num > 9)
+	{
+		num = num / 10;
+		i++;
+	}
+	return (i);
+}
+
 char	*ft_itoa(int n)
 {
-	char	*str;
-	long	nbr;
-	size_t	size;
+	int				i;
+	unsigned int	num;
+	char			*buffer;
 
-	nbr = n;
-	size = n > 0 ? 0 : 1;
-	nbr = nbr > 0 ? nbr : -nbr;
-	while (n)
-	{
-		n /= 10;
-		size++;
-	}
-	if (!(str = (char *)malloc(size + 1)))
+	buffer = (char *)malloc(num_of_char(n) + 1);
+	if (!buffer)
 		return (0);
-	*(str + size--) = '\0';
-	while (nbr > 0)
+	i = num_of_char(n);
+	num = n;
+	if (n < 0)
 	{
-		*(str + size--) = nbr % 10 + '0';
-		nbr /= 10;
+		num = -n;
+		buffer[0] = '-';
 	}
-	if (size == 0 && str[1] == '\0')
-		*(str + size) = '0';
-	else if (size == 0 && str[1] != '\0')
-		*(str + size) = '-';
-	return (str);
+	buffer[i] = 0;
+	buffer[i - 1] = '0';
+	while (num > 0)
+	{
+		i--;
+		buffer[i] = num % 10 + 48;
+		num /= 10;
+	}
+	return (buffer);
 }
