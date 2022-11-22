@@ -6,7 +6,7 @@
 /*   By: apeposhi <apeposhi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/20 15:52:17 by apeposhi          #+#    #+#             */
-/*   Updated: 2022/11/22 13:09:33 by apeposhi         ###   ########.fr       */
+/*   Updated: 2022/11/22 15:57:25 by apeposhi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@ static int	num_of_char(int n)
 		i = 2;
 		number = -n;
 	}
-	while (num > 9)
+	while (number > 9)
 	{
-		num = num / 10;
+		number = number / 10;
 		i++;
 	}
 	return (i);
