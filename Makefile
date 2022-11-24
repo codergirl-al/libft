@@ -6,7 +6,7 @@
 #    By: apeposhi <apeposhi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/17 14:25:17 by apeposhi          #+#    #+#              #
-#    Updated: 2022/11/23 17:40:26 by apeposhi         ###   ########.fr        #
+#    Updated: 2022/11/24 17:20:30 by apeposhi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,6 +30,10 @@ ft_putchar_fd.c	ft_putstr_fd.c	ft_putendl_fd.c	ft_putnbr_fd.c
 
 OBJS=$(SRCS:.c=.o)
 
+BONUSES=ft_lstnew.c		ft_lstadd_front.c		ft_lstsize.c	ft_lstlast.c	ft_lstadd_back.c
+
+BONUS_OBJS = $(BONUSES:.c=.o)
+
 all: $(NAME)
 
 %.o: %.c
@@ -38,8 +42,11 @@ all: $(NAME)
 $(NAME): $(SRCS) $(OBJS)
 	@ar rcs $(NAME) $(OBJS)
 
+bonus:	$(OBJS) $(BONUS_OBJS)
+	ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
+
 clean:
-	rm -f $(OBJS)
+	rm -f $(OBJS) $(BONUS_OBJS)
 
 fclean:
 	rm -f $(NAME)
