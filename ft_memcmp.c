@@ -6,7 +6,7 @@
 /*   By: apeposhi <apeposhi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 14:49:01 by apeposhi          #+#    #+#             */
-/*   Updated: 2022/10/27 05:56:04 by apeposhi         ###   ########.fr       */
+/*   Updated: 2022/11/24 10:10:07 by apeposhi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-size_t	i;
+	size_t	i;
 	char	*str1;
 	char	*str2;
 
