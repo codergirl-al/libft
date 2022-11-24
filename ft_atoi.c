@@ -6,7 +6,7 @@
 /*   By: apeposhi <apeposhi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 14:28:46 by apeposhi          #+#    #+#             */
-/*   Updated: 2022/11/02 18:37:14 by apeposhi         ###   ########.fr       */
+/*   Updated: 2022/11/24 11:06:23 by apeposhi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,6 @@ int	ft_atoi(const char *str)
 	while (*str == ' ' || *str == '\n' || *str == '\t' || *str == '\v' || \
 			*str == '\r' || *str == '\f')
 		str++;
-	if (*str == '-')
-		isneg = -1;
 	if (*str == '-' || *str == '+')
 		i++;
 	while (str[i] >= '0' && str[i] <= '9')
@@ -37,7 +35,7 @@ int	ft_atoi(const char *str)
 		if ((isneg * val) < -4294967295)
 			return (0);
 	}
-	if (isneg == -1)
+	if (*str == '-')
 		val = val * -1;
 	return (val);
 }
