@@ -6,7 +6,7 @@
 /*   By: apeposhi <apeposhi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 11:24:01 by apeposhi          #+#    #+#             */
-/*   Updated: 2022/11/24 14:32:00 by apeposhi         ###   ########.fr       */
+/*   Updated: 2022/11/24 15:07:02 by apeposhi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 t_list	*ft_lstnew(void *content)
 {
-	t_list	*newNode;
+	t_list	*new_node;
 
-	newNode = (t_list *) malloc(sizeof(newNode));
-	if (!newNode)
+	new_node = (t_list *) malloc(sizeof(new_node));
+	if (!new_node)
 		return (NULL);
-	newNode -> content = content;
-	newNode -> next = NULL;
-	return (newNode);
+	new_node -> content = content;
+	new_node -> next = NULL;
+	return (new_node);
 }
