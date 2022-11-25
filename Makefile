@@ -6,7 +6,7 @@
 #    By: apeposhi <apeposhi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/17 14:25:17 by apeposhi          #+#    #+#              #
-#    Updated: 2022/11/25 12:23:58 by apeposhi         ###   ########.fr        #
+#    Updated: 2022/11/25 14:42:46 by apeposhi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,7 @@ ft_putchar_fd.c	ft_putstr_fd.c	ft_putendl_fd.c	ft_putnbr_fd.c
 OBJS=$(SRCS:.c=.o)
 
 BONUSES=ft_lstnew.c		ft_lstadd_front.c		ft_lstsize.c	ft_lstlast.c	ft_lstadd_back.c	ft_lstdelone.c\
-		ft_lstclear.c
+		ft_lstclear.c	ft_lstiter.c
 
 BONUS_OBJS = $(BONUSES:.c=.o)
 
