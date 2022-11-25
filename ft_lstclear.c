@@ -6,7 +6,7 @@
 /*   By: apeposhi <apeposhi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/25 12:22:58 by apeposhi          #+#    #+#             */
-/*   Updated: 2022/11/25 13:05:18 by apeposhi         ###   ########.fr       */
+/*   Updated: 2022/11/25 17:24:14 by apeposhi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 		return ;
 	while (lst && *lst)
 	{
-		temp = (*lst) -> next;
+		temp = (*lst)->next;
 		ft_lstdelone(*lst, del);
 		*lst = temp;
 	}

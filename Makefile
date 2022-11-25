@@ -6,7 +6,7 @@
 #    By: apeposhi <apeposhi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/17 14:25:17 by apeposhi          #+#    #+#              #
-#    Updated: 2022/11/25 16:24:23 by apeposhi         ###   ########.fr        #
+#    Updated: 2022/11/25 17:21:40 by apeposhi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@
 # 	@echo "|___._|   __|_____|   __|_____|_____||__|__||__|"
 # 	@echo "      |__|        |__|"
 
-CC = gcc
+CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
 NAME=libft.a
@@ -47,7 +47,7 @@ bonus:	$(OBJS) $(BONUS_OBJS)
 	ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
 
 clean:
-	rm -f $(OBJS) $(BONUS_OBJS)
+	rm -f $(OBJS) $(BONUS_OBJS) libft.a a.out
 
 fclean:
 	rm -f $(NAME)

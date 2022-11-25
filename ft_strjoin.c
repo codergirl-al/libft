@@ -6,7 +6,7 @@
 /*   By: apeposhi <apeposhi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 18:44:59 by apeposhi          #+#    #+#             */
-/*   Updated: 2022/11/24 17:12:37 by apeposhi         ###   ########.fr       */
+/*   Updated: 2022/11/25 17:32:19 by apeposhi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,29 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
+	char	*res;
 	size_t	i;
+	size_t	len;
 	size_t	j;
-	char	*joined;
 
-	i = ft_strlen(s1);
-	j = 0;
-	joined = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
-	if (!joined)
+	if (!s1 || !s2)
 		return (NULL);
-	while (j < ft_strlen(s1))
-	{
-		joined[j] = s1[j];
-		j++;
-	}
+	len = ft_strlen(s1) + ft_strlen(s2) + 1;
+	res = malloc(len * sizeof(char));
+	if (!res)
+		return (NULL);
+	i = 0;
 	j = 0;
-	while (j < (ft_strlen(s1) + ft_strlen(s2)))
+	while (i < len)
 	{
-		if (s2[j])
-			joined[i] = s2[j];
+		if (i < ft_strlen(s1))
+			res[i] = s1[i];
+		else
+		{
+			res[i] = s2[j];
+			j++;
+		}
 		i++;
-		j++;
 	}
-	joined[j] = 0;
-	return (joined);
+	return (res);
 }
