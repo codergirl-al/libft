@@ -232,81 +232,94 @@ the value of the parameter ’content’. The variable
 **ft_lstadd_front**
 Function name | ft_lstadd_front
 | :--- | :---
-Prototype | 
+Prototype | void ft_lstadd_front(t_list **lst, t_list *new);
 Turn in files | -
-Parameters | 
-Return value | 
-External funcs. | 
-Description |
+Parameters | lst: The address of a pointer to the first link of
+a list and new: The address of a pointer to the node to be added to the list.
+Return value | None
+External funcs. | None
+Description | Adds the node 'new' at the beginning of the list.
 
-**ft_**
+**ft_lstsize**
+Function name | ft_lstsize
+| :--- | :---
+Prototype | int ft_lstsize(t_list *lst);
+Turn in files | -
+Parameters | lst: The beginning of the list.
+Return value | The length of the list
+External funcs. | None
+Description | Counts the number of nodes in a list
+
+**ft_lstlast**
+Function name | ft_lstlast
+| :--- | :---
+Prototype | t_list *ft_lstlast(t_list *lst);
+Turn in files | -
+Parameters | lst: The beginning of the list.
+Return value | Last node of the list
+External funcs. | None
+Description | Returns the last node of the list
+
+**ft_lstadd_back**
+Function name | ft_lstadd_back
+| :--- | :---
+Prototype | void ft_lstadd_back(t_list **lst, t_list *new);
+Turn in files | -
+Parameters | lst: The address of a pointer to the first link of
+a list and new: The address of a pointer to the node to be
+added to the list.
+Return value | None
+External funcs. | None
+Description | Adds the node 'new' at the end of the list.
+
+**ft_lstdelone**
 Function name | 
 | :--- | :---
-Prototype | 
+Prototype | void ft_lstdelone(t_list *lst, void (*del)(void
+*));
 Turn in files | -
-Parameters | 
-Return value | 
-External funcs. | 
-Description |
+Parameters | lst: The node to free and del: The address of the function used to delete the content.
+Return value | None
+External funcs. | free
+Description | Takes as a parameter a node and frees the memory of
+the node’s content using the function ’del’ given
+as a parameter and free the node. The memory of
+’next’ must not be freed.
 
-**ft_**
-Function name | 
+**ft_lstclear**
+Function name | ft_lstclear
 | :--- | :---
-Prototype | 
+Prototype | void ft_lstclear(t_list **lst, void (*del)(void
+*));
 Turn in files | -
-Parameters | 
-Return value | 
-External funcs. | 
-Description |
+Parameters | lst: The address of a pointer to a node and del: The address of the function used to delete the content of the node.
+Return value | None
+External funcs. | free
+Description | Deletes and frees the given node and every
+successor of that node, using the function ’del’
+and free. Finally, the pointer to the list must be set to
+NULL.
 
-**ft_**
-Function name | 
+**ft_lstiter**
+Function name | ft_lstiter
 | :--- | :---
-Prototype | 
+Prototype | void ft_lstiter(t_list *lst, void (*f)(void *));
 Turn in files | -
-Parameters | 
-Return value | 
-External funcs. | 
-Description |
+Parameters | st: The address of a pointer to a node and f: The address of the function used to iterate on
+the list.
+Return value | None
+External funcs. | None
+Description | Iterates the list ’lst’ and applies the function
+’f’ on the content of each node.
 
-**ft_**
-Function name | 
+**ft_lstmap**
+Function name | ft_lstmap
 | :--- | :---
-Prototype | 
+Prototype | t_list *ft_lstmap(t_list *lst, void *(*f)(void *),
+void (*del)(void *));
 Turn in files | -
-Parameters | 
-Return value | 
-External funcs. | 
-Description |
-
-**ft_**
-Function name | 
-| :--- | :---
-Prototype | 
-Turn in files | -
-Parameters | 
-Return value | 
-External funcs. | 
-Description |
-
-**ft_**
-Function name | 
-| :--- | :---
-Prototype | 
-Turn in files | -
-Parameters | 
-Return value | 
-External funcs. | 
-Description |
-
-**ft_**
-Function name | 
-| :--- | :---
-Prototype | 
-Turn in files | -
-Parameters | 
-Return value | 
-External funcs. | 
-Description |
-
+Parameters | lst: The address of a pointer to a node, f: The address of the function used to iterate on the list and del: The address of the function used to delete the content of a node if needed.
+Return value | The new list or NULL if the allocation fails.
+External funcs. | malloc, free
+Description | Iterates the list ’lst’ and applies the function ’f’ on the content of each node. Creates a new list resulting of the successive applications of the function ’f’. The ’del’ function is used to delete the content of a node if needed.
 </details>
