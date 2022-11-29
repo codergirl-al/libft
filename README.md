@@ -58,3 +58,20 @@ Function name | ft_substr
 Prototype | char *ft_substr(char const *s, unsigned int start, size_t len);
 Turn in files | -
 Parameters | s: The string from which to create the substring &nbsp; start: The start index of the substring in the string 's'. &nbsp; len: The maximum length of the substring.
+Return value | The substring or NULL if the allocation fails.
+External functs. | malloc
+Description | Allocates (with malloc) and returns a substring from the string 's'. The substring begins at index 'start' and is of maximum size 'len'.
+
+**ft_strjoin**
+Function name | ft_strjoin
+| :--- | :---
+Prototype | char *ft_strjoin(char const *s1, char const *s2);
+Turn in files | -
+Parameters | s1: The prefix string and s2: The suffix string
+Return value | The new string or NULL if the allocation fails.
+External functs. | malloc
+Description | Allocates (with malloc(3)) and returns a new
+string, which is the result of the concatenation
+of ’s1’ and ’s2’.
+
+**ft_strtrim**
