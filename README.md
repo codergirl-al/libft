@@ -23,6 +23,9 @@ functions. This way, their scope will be limited to the appropriate file.
 * Your **libft.a** has to be created at the root of your repository.
 
 ## Part 1 - Libc functions
+
+<details>
+<summary> Click here to see the functions </summary>
 Those functions are from the libc library. The goal is to have the same prototypes and implement the same behaviors as the originals. They must comply with the way they are defined in their **man**. The only difference will be their names. They will begin with the '**ft_**' prefix. For instance, strlen becomes ft_strlen.
 
 • isalpha
@@ -48,10 +51,13 @@ Those functions are from the libc library. The goal is to have the same prototyp
 • ato
 • calloc
 • strdup
+</details>
 
 ## Part 2 - Additional functions
 In this second part you must develop a set of functions that are either not in the libc, or that are part of it but ina different form.
 
+<details>
+<summary> Click here to see the functions </summary>
 **ft_substr**
 Function name | ft_substr
 | :--- | :---
@@ -75,3 +81,232 @@ string, which is the result of the concatenation
 of ’s1’ and ’s2’.
 
 **ft_strtrim**
+Function name | ft_strtrim
+| :--- | :---
+Prototype | char *ft_strtrim(char const *s1, char const *set);
+Turn in files | -
+Parameters | s1: The string to be trimmed and set: The reference set of characters to trim.
+Return value | The trimmed string or NULL if the allocation fails.
+External funcs. | malloc
+Description | Allocates (with malloc(3)) and returns a copy of
+’s1’ with the characters specified in ’set’ removed
+from the beginning and the end of the string.
+
+**ft_split**
+Function name | ft_split
+| :--- | :---
+Prototype | char **ft_split(char const *s, char c);
+Turn in files | -
+Parameters | s: The string to be split and c: The delimiter character
+Return value | The array of new strings resulting from the split or NULL if the allocation fails.
+External funcs. | malloc, free
+Description | Allocates (with malloc(3)) and returns an array
+of strings obtained by splitting ’s’ using the
+character ’c’ as a delimiter. The array must end
+with a NULL pointer.
+
+**ft_itoa**
+Function name | ft_itoa
+| :--- | :---
+Prototype | char *ft_itoa(int n);
+Turn in files | -
+Parameters | n: the integer to convert.
+Return value | The string representing the integer or NULL if the allocation fails.
+External funcs. | malloc
+Description | Allocates (with malloc(3)) and returns a string
+representing the integer received as an argument.
+Negative numbers must be handled.
+
+**ft_strmapi**
+Function name | ft_strmapi
+| :--- | :---
+Prototype | char *ft_strmapi(char const *s, char (*f)(unsigned
+int, char));
+Turn in files | -
+Parameters | s: The string on which to iterate and f: The function to apply on each character.
+Return value | The string created from the successive applications
+of 'f' or NULL if the allocation fails.
+External funcs. | malloc
+Description | Applies the function ’f’ to each character of the
+string ’s’, and passing its index as first argument
+to create a new string (with malloc(3)) resulting
+from successive applications of ’f’.
+
+**ft_striteri**
+Function name | ft_striteri
+| :--- | :---
+Prototype | void ft_striteri(char *s, void (*f)(unsigned int,
+char*));
+Turn in files | -
+Parameters | s: The string on which to iterate and f: The function to apply on each character
+Return value | None
+External funcs. | None
+Description | Applies the function ’f’ on each character of
+the string passed as argument, passing its index
+as first argument. Each character is passed by
+address to ’f’ to be modified if necessary.
+
+**ft_putchar_fd**
+Function name | ft_putchar_fd
+| :--- | :---
+Prototype | void ft_putchar_fd(char c, int fd);
+Turn in files | -
+Parameters | c: The character to output and fdL The file descriptor on which to write.
+Return value | None
+External funcs. | write
+Description | Outputs the character ’c’ to the given file
+descriptor.
+
+**ft_putstr_fd**
+Function name | ft_putstr_fd
+| :--- | :---
+Prototype | void ft_putstr_fd(char *s, int fd);
+Turn in files | -
+Parameters | s: The string to output and fd: The file descriptor on which to write.
+Return value | None
+External funcs. | write
+Description | Outputs the string ’s’ to the given file
+descriptor.
+
+**ft_putendl_fd**
+Function name | ft_putendl_fd
+| :--- | :---
+Prototype | void ft_putendl_fd(char *s, int fd);
+Turn in files | -
+Parameters | s: The string to output and fd: The file descriptor on which to write.
+Return value | None
+External funcs. | write
+Description | Outputs the integer ’n’ to the given file
+descriptor.
+
+**ft_putnbr_fd**
+Function name | ft_putnbr_fd
+| :--- | :---
+Prototype | 
+Turn in files | -
+Parameters | s: The string to output and fd: The file descriptor on which to write.
+Return value | None
+External funcs. | write
+Description | Outputs the integer ’n’ to the given file
+descriptor.
+</details>
+
+## Bonus part
+
+If you completed the mandatory part, do not hesitate to go further by doing this extra one.
+
+<details>
+<summary> Click here to see the functions </summary>
+
+Functions to manipulate memory and strings is very useful. But you will soon discover
+that manipulating lists is even more useful.
+You have to use the following structure to represent a node of your list. Add its
+declaration to your libft.h file:
+```c
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}					t_list;
+```
+The members of the t_list struct are:
+• content: The data contained in the node.
+void * allows to store any kind of data.
+• next: The address of the next node, or NULL if the next node is the last one.
+In your Makefile, add a make bonus rule to add the bonus functions to your libft.a
+
+
+**ft_lstnew**
+Function name | ft_lstnew
+| :--- | :---
+Prototype | t_list *ft_lstnew(void *content);
+Turn in files | -
+Parameters | content: The content to create the node with.
+Return value | The new node
+External funcs. | malloc
+Description | Allocates (with malloc(3)) and returns a new node.
+The member variable ’content’ is initialized with
+the value of the parameter ’content’. The variable
+’next’ is initialized to NULL.
+
+**ft_lstadd_front**
+Function name | ft_lstadd_front
+| :--- | :---
+Prototype | 
+Turn in files | -
+Parameters | 
+Return value | 
+External funcs. | 
+Description |
+
+**ft_**
+Function name | 
+| :--- | :---
+Prototype | 
+Turn in files | -
+Parameters | 
+Return value | 
+External funcs. | 
+Description |
+
+**ft_**
+Function name | 
+| :--- | :---
+Prototype | 
+Turn in files | -
+Parameters | 
+Return value | 
+External funcs. | 
+Description |
+
+**ft_**
+Function name | 
+| :--- | :---
+Prototype | 
+Turn in files | -
+Parameters | 
+Return value | 
+External funcs. | 
+Description |
+
+**ft_**
+Function name | 
+| :--- | :---
+Prototype | 
+Turn in files | -
+Parameters | 
+Return value | 
+External funcs. | 
+Description |
+
+**ft_**
+Function name | 
+| :--- | :---
+Prototype | 
+Turn in files | -
+Parameters | 
+Return value | 
+External funcs. | 
+Description |
+
+**ft_**
+Function name | 
+| :--- | :---
+Prototype | 
+Turn in files | -
+Parameters | 
+Return value | 
+External funcs. | 
+Description |
+
+**ft_**
+Function name | 
+| :--- | :---
+Prototype | 
+Turn in files | -
+Parameters | 
+Return value | 
+External funcs. | 
+Description |
+
+</details>
