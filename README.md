@@ -23,6 +23,7 @@ functions. This way, their scope will be limited to the appropriate file.
 * Your **libft.a** has to be created at the root of your repository.
 
 ## Part 1 - Libc functions
+Those functions are from the libc library. The goal is to have the same prototypes and implement the same behaviors as the originals. They must comply with the way they are defined in their **man**. The only difference will be their names. They will begin with the '**ft_**' prefix. For instance, strlen becomes ft_strlen.
 
 • isalpha
 • isdigit
@@ -45,3 +46,15 @@ functions. This way, their scope will be limited to the appropriate file.
 • memcmp
 • strnstr
 • ato
+• calloc
+• strdup
+
+## Part 2 - Additional functions
+In this second part you must develop a set of functions that are either not in the libc, or that are part of it but ina different form.
+
+**ft_substr**
+Function name | ft_substr
+| :--- | :---
+Prototype | char *ft_substr(char const *s, unsigned int start, size_t len);
+Turn in files | -
+Parameters | s: The string from which to create the substring \n start: The start index of the substring in the string 's'. \n len: The maximum length of the substring.
