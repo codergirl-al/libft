@@ -6,12 +6,21 @@
 /*   By: apeposhi <apeposhi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 15:42:20 by apeposhi          #+#    #+#             */
-/*   Updated: 2022/11/23 16:02:38 by apeposhi         ###   ########.fr       */
+/*   Updated: 2022/11/29 14:42:55 by apeposhi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+** @brief Iterate on a string, apply a function on every char of
+** the string. The function can change the char in the string but
+** won't produce a new string like strmapi.
+** 
+** @param str: a NULL-terminating string
+** @param f(index,char):   the function to be applied on every char,
+** it takes 2 arguments: the char and its index in the string.
+*/
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	size_t	i;

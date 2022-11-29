@@ -6,12 +6,22 @@
 /*   By: apeposhi <apeposhi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 14:46:28 by apeposhi          #+#    #+#             */
-/*   Updated: 2022/11/17 03:34:24 by apeposhi         ###   ########.fr       */
+/*   Updated: 2022/11/29 14:44:44 by apeposhi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+** @brief Trim the start and end of a string by removing chars that
+** is in the given set. The trimmed string is stored in a new memory
+** address. The original string is not touched at all.
+**
+** @param str: a NULL-terminated string to be trimmed.
+** @param set: a char array represents a set of chars that needs
+** to be trimmed.
+** @return the new trimmed string
+*/
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	i;

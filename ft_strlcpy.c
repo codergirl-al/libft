@@ -6,12 +6,21 @@
 /*   By: apeposhi <apeposhi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 14:49:58 by apeposhi          #+#    #+#             */
-/*   Updated: 2022/10/27 15:09:37 by apeposhi         ###   ########.fr       */
+/*   Updated: 2022/11/29 14:43:25 by apeposhi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+** @brief Safe copy of the source string to the destination 
+** string. It only copies up to a maximum amount of char.
+**
+** @param dest: the destination memory address to copy to.
+** @param src:  a NULL-terminated string to be copied from.
+** @param max_len: the maximum length of char to be copied.
+** @return the length of the destination string after copying.
+*/
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	n;

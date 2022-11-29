@@ -6,12 +6,19 @@
 /*   By: apeposhi <apeposhi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 17:34:27 by apeposhi          #+#    #+#             */
-/*   Updated: 2022/11/24 10:12:49 by apeposhi         ###   ########.fr       */
+/*   Updated: 2022/11/29 14:41:44 by apeposhi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+** @brief write a string and a new line character
+** to the given file descripter.
+**
+** @param str:  a NULL-terminated string
+** @param fd: the file descripter
+*/
 void	ft_putendl_fd(char *s, int fd)
 {
 	size_t	i;

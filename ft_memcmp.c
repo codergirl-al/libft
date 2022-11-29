@@ -6,12 +6,22 @@
 /*   By: apeposhi <apeposhi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 14:49:01 by apeposhi          #+#    #+#             */
-/*   Updated: 2022/11/24 10:10:07 by apeposhi         ###   ########.fr       */
+/*   Updated: 2022/11/29 14:41:05 by apeposhi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+** @brief Compare the first different byte found between two byte strings.
+** Both byte strings are assumed to have the size of the third argument.
+**
+** @param m1: 1st byte string, interpreted as unsigned char during comparison.
+** @param m2: 2nd byte string, interpreted as unsigned char during comparison.
+** @param size: the size of both byte string
+** @return 0 if both byte strings are identical in value,
+** otherwise return the difference of the different byte, m1 - m2.
+*/
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	size_t	i;

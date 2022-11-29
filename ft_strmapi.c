@@ -6,12 +6,21 @@
 /*   By: apeposhi <apeposhi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/22 15:59:40 by apeposhi          #+#    #+#             */
-/*   Updated: 2022/11/23 15:21:26 by apeposhi         ###   ########.fr       */
+/*   Updated: 2022/11/29 14:43:54 by apeposhi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+** @brief Map a function over a string, and creates a new string
+** from it. The given string will not be changed at all.
+**
+** @param str: a NULL-terminated string to be mapped over
+** @param f(index,char):   the function to be applied on every char,
+** it takes 2 arguments: the char and its index in the string.
+** @return the new string
+*/
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	size_t	i;

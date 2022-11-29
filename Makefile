@@ -6,7 +6,7 @@
 #    By: apeposhi <apeposhi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/17 14:25:17 by apeposhi          #+#    #+#              #
-#    Updated: 2022/11/25 17:21:40 by apeposhi         ###   ########.fr        #
+#    Updated: 2022/11/26 14:42:29 by apeposhi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,9 +37,6 @@ BONUS_OBJS = $(BONUSES:.c=.o)
 
 all: $(NAME)
 
-%.o: %.c
-	@$(CC) $(CFLAGS) -c $^ -o $@
-
 $(NAME): $(SRCS) $(OBJS)
 	@ar rcs $(NAME) $(OBJS)
 
@@ -47,9 +44,9 @@ bonus:	$(OBJS) $(BONUS_OBJS)
 	ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
 
 clean:
-	rm -f $(OBJS) $(BONUS_OBJS) libft.a a.out
+	rm -f $(OBJS) $(BONUS_OBJS)
 
-fclean:
+fclean: clean
 	rm -f $(NAME)
 
 norm: $(SRCS)

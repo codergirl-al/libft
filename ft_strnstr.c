@@ -6,12 +6,21 @@
 /*   By: apeposhi <apeposhi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 14:50:06 by apeposhi          #+#    #+#             */
-/*   Updated: 2022/10/28 17:10:42 by apeposhi         ###   ########.fr       */
+/*   Updated: 2022/11/29 14:44:17 by apeposhi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+** @brief Locate the first occurance of a string(needle) in
+** a longer string(haystack).
+**
+** @param haystack: a NULL-terminated string to be searched in
+** @param needle:   a NULL-terminated string to find in haystack
+** @param max_len:  the maximum length to search in the haystack
+** @return the pointer to the needle location
+*/
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	i;

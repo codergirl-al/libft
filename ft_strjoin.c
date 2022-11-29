@@ -6,12 +6,23 @@
 /*   By: apeposhi <apeposhi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 18:44:59 by apeposhi          #+#    #+#             */
-/*   Updated: 2022/11/25 17:32:19 by apeposhi         ###   ########.fr       */
+/*   Updated: 2022/11/29 14:43:05 by apeposhi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include	"libft.h"
 
+/*
+** @brief Join two strings into a new memory. The second string
+** is concatenated after the first string. It is equivalence
+** to the "concat" function in other programming languages.
+**
+** @param s1: the 1st NULL-terminated string
+** @param s2: the 2nd NULL-terminated string
+** @return a new memory address storing the string after
+** concatenation of the 2 original strings. NULL is returned if
+** malloc fails.
+*/
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*res;

@@ -6,12 +6,24 @@
 /*   By: apeposhi <apeposhi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 14:49:28 by apeposhi          #+#    #+#             */
-/*   Updated: 2022/11/25 17:18:06 by apeposhi         ###   ########.fr       */
+/*   Updated: 2022/11/29 14:41:22 by apeposhi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+** @brief Copy a given size of memory from one byte string to
+** another, assuming that memory overlapping IS possible.
+** 
+** @details Comparing the dest and src pointer to determine
+** whether to copy bytes from the beginning or the end.
+**
+** @param dest: destination memory address to be copied to
+** @param src:  source memory address to be copied from
+** @param size: size of bytes to copy
+** @return the destination memory address
+*/
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	int		i;

@@ -6,7 +6,7 @@
 /*   By: apeposhi <apeposhi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/20 15:52:17 by apeposhi          #+#    #+#             */
-/*   Updated: 2022/11/22 15:57:25 by apeposhi         ###   ########.fr       */
+/*   Updated: 2022/11/29 14:39:22 by apeposhi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,14 @@ static int	num_of_char(int n)
 	return (i);
 }
 
+/*
+** @brief Convert an int to a string, memory is allocated to
+** the string.
+**
+** @param n: the int to be converted
+** @return a NULL-terminated string that represents the int,
+** NULL pointer is returned if malloc fails.
+*/
 char	*ft_itoa(int n)
 {
 	int				i;

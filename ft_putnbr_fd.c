@@ -6,7 +6,7 @@
 /*   By: apeposhi <apeposhi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 17:38:54 by apeposhi          #+#    #+#             */
-/*   Updated: 2022/11/24 10:05:44 by apeposhi         ###   ########.fr       */
+/*   Updated: 2022/11/29 14:41:51 by apeposhi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,12 @@ static int	ft_val(int n)
 		return (n);
 }
 
+/*
+** @brief Write an int to the given file descripter.
+**
+** @param n:  the interger to be written to the file descripter
+** @param fd: the file descripter
+*/
 void	ft_putnbr_fd(int n, int fd)
 {
 	char	str[13];

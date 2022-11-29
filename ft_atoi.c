@@ -6,12 +6,24 @@
 /*   By: apeposhi <apeposhi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 14:28:46 by apeposhi          #+#    #+#             */
-/*   Updated: 2022/11/24 11:06:23 by apeposhi         ###   ########.fr       */
+/*   Updated: 2022/11/29 14:37:51 by apeposhi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+** @brief converts a string into an int.
+**
+** @details When the number overflow at the long long
+** level, the number will became negative, it returns 
+** 0 or -1 depending on the size. Overflow on the int
+** level is handled by the casting at the end.
+** 
+** @param str: the string that represents a number,
+** multiple spaces, follow by one '-' or '+', is allowed.
+** @return the int after convertion
+*/
 int	ft_atoi(const char *str)
 {
 	long long int	val;

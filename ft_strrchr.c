@@ -6,10 +6,18 @@
 /*   By: apeposhi <apeposhi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 14:50:09 by apeposhi          #+#    #+#             */
-/*   Updated: 2022/10/27 15:09:25 by apeposhi         ###   ########.fr       */
+/*   Updated: 2022/11/29 14:44:29 by apeposhi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** @brief Locate the last given char in a given string.
+**
+** @param str: a NULL-terminated string
+** @param c:   the value to find in the string, it is interpreted
+** as char during search.
+** @return the memory address of the value in the string
+*/
 char	*ft_strrchr(const char *s, int c)
 {
 	int				i;

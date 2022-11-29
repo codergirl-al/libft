@@ -6,12 +6,28 @@
 /*   By: apeposhi <apeposhi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 14:49:52 by apeposhi          #+#    #+#             */
-/*   Updated: 2022/11/25 16:50:33 by apeposhi         ###   ########.fr       */
+/*   Updated: 2022/11/29 14:43:15 by apeposhi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/* 
+** @brief Safe concatenate of the source string after the
+** destination string. Length of the string after concatenation
+** (including the NULL-terminator) must be specified to ensure
+** safe concatenation. Concatenation WILL NOT happen if the
+** destination memory address does not have enough space to store
+** the entire string after concatenation.
+**
+** @param dest: a string to concatenated after.
+** @param src:  a NULL-terminated string to be copied to dest.
+** @param max_len: the maximum length of the destination string after
+** concatenation (including the NULL-terminator).
+** @return the length of the result array, the expected length of 
+** the result array is returned if there is not enough space to
+** concatenate.
+*/
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;

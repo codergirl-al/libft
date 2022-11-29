@@ -6,12 +6,20 @@
 /*   By: apeposhi <apeposhi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 15:05:27 by apeposhi          #+#    #+#             */
-/*   Updated: 2022/11/24 15:09:34 by apeposhi         ###   ########.fr       */
+/*   Updated: 2022/11/29 14:39:39 by apeposhi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+** @brief Add a node to the start of linked list.
+** Equivalence to the 'cons' function in Lisp.
+**
+** @param lst:   the memory address of the pointer pointing
+** to the start of linked list.
+** @param front: the node to be added
+*/
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	if (lst)

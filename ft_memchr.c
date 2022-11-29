@@ -6,12 +6,20 @@
 /*   By: apeposhi <apeposhi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 14:48:53 by apeposhi          #+#    #+#             */
-/*   Updated: 2022/10/27 15:10:20 by apeposhi         ###   ########.fr       */
+/*   Updated: 2022/11/29 14:40:57 by apeposhi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+** @brief Locate the first occurance of a value in a byte string.
+**
+** @param mem:  the memory address
+** @param val:  the value to look for, it is interpreted as an
+** unsigned char during comparasion.
+** @param max_size: the maximum size of byte to look for the value.
+*/
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	size_t	i;

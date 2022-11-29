@@ -6,12 +6,11 @@
 /*   By: apeposhi <apeposhi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 14:29:14 by apeposhi          #+#    #+#             */
-/*   Updated: 2022/10/27 15:14:27 by apeposhi         ###   ########.fr       */
+/*   Updated: 2022/11/29 14:30:47 by apeposhi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c);
-int	ft_isdigit(int c);
+#include "libft.h"
 
 int	ft_isalnum(int c)
 {

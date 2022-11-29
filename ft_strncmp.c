@@ -6,12 +6,22 @@
 /*   By: apeposhi <apeposhi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 17:32:36 by apeposhi          #+#    #+#             */
-/*   Updated: 2022/11/24 10:13:10 by apeposhi         ###   ########.fr       */
+/*   Updated: 2022/11/29 14:44:04 by apeposhi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+** @brief Compare the first different byte found between two strings.
+** Comparision stops when a string terminated.
+**
+** @param s1: 1st string.
+** @param s2: 2nd string.
+** @param max_len: the maximum length of bytes to compare
+** @return 0 if both strings are identical in value,
+** negative numbers if m1 < m2, positive numbers if m1 > m2.
+*/
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t			i;

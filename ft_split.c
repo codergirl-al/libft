@@ -6,11 +6,29 @@
 /*   By: apeposhi <apeposhi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 03:43:56 by apeposhi          #+#    #+#             */
-/*   Updated: 2022/11/23 14:45:22 by apeposhi         ###   ########.fr       */
+/*   Updated: 2022/11/29 14:42:15 by apeposhi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static char	*dup_until_c(char *str, char c)
+{
+	size_t	len;
+	char	*dst;
+
+	len = 0;
+	while (str[len] != c && str[len] != '\0')
+		len++;
+	dst = (char *)ft_calloc(sizeof(char), (len + 1));
+	if (!dst)
+	{
+		free(dst);
+		return (NULL);
+	}
+	ft_strlcpy(dst, str, (len + 1));
+	return (dst);
+}
 
 static int	count_words(const char *str, char c)
 {
@@ -33,43 +51,79 @@ static int	count_words(const char *str, char c)
 	return (i);
 }
 
-static char	*word_dup(const char *str, int start, int finish)
+static char	*word_in_string(char *str, char c, int n)
 {
-	char	*word;
+	char	*dst;	
+	int		num;
 	int		i;
 
+	num = 0;
 	i = 0;
-	word = malloc((finish - start + 1) * sizeof(char));
-	while (start < finish)
-		word[i++] = str[start++];
-	word[i] = '\0';
-	return (word);
+	while (str[i] != '\0')
+	{
+		if (str[i] == c)
+			i++;
+		else
+		{
+			if (num == n)
+			{
+				dst = dup_until_c((str + i), c);
+				if (dst == NULL)
+					return (NULL);
+			}
+			while (str[i] != '\0' && str[i] != c)
+				i++;
+			num++;
+		}
+	}
+	return (dst);
 }
 
+static	char	**free_array(char **ptr, int allocated)
+{
+	int	i;
+
+	i = 0;
+	while (ptr[i] != NULL && i < allocated)
+	{
+		free(ptr[i]);
+		i++;
+	}
+	free(ptr);
+	return (NULL);
+}
+
+/* 
+** @brief Allocate memory for an array of string that are
+** splitted from a string str by delimiter c.
+** 
+** @param str: the string to be splitted
+** @param c: delimiter
+** @return the splitted string in an array
+*/
 char	**ft_split(char const *s, char c)
 {
+	char	**split_arr;
 	size_t	i;
-	size_t	j;
-	int		controller;
-	char	**split;
+	size_t	len;
 
-	split = malloc((count_words(s, c) + 1) * sizeof(char *));
-	if (!s || !split)
-		return (0);
+	if (!s)
+		return (NULL);
 	i = 0;
-	j = 0;
-	controller = -1;
-	while (i <= ft_strlen(s))
+	len = count_words(s, c);
+	split_arr = (char **)ft_calloc(sizeof(split_arr), (len + 1));
+	if (split_arr == NULL)
+		return (NULL);
+	while (i < len)
 	{
-		if (s[i] != c && controller < 0)
-			controller = i;
-		else if ((s[i] == c || i == ft_strlen(s)) && controller >= 0)
+		split_arr[i] = word_in_string((char *)s, c, i);
+		if (split_arr[i] == NULL)
 		{
-			split[j++] = word_dup(s, controller, i);
-			controller = -1;
+			free_array(split_arr, len);
+			return (NULL);
 		}
 		i++;
 	}
-	split[j] = 0;
-	return (split);
+	split_arr[i] = NULL;
+	return (split_arr);
 }
