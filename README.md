@@ -76,9 +76,7 @@ Turn in files | -
 Parameters | s1: The prefix string and s2: The suffix string
 Return value | The new string or NULL if the allocation fails.
 External functs. | malloc
-Description | Allocates (with malloc(3)) and returns a new
-string, which is the result of the concatenation
-of ’s1’ and ’s2’.
+Description | Allocates (with malloc(3)) and returns a new string, which is the result of the concatenation of ’s1’ and ’s2’.
 
 **ft_strtrim**
 Function name | ft_strtrim
@@ -88,9 +86,7 @@ Turn in files | -
 Parameters | s1: The string to be trimmed and set: The reference set of characters to trim.
 Return value | The trimmed string or NULL if the allocation fails.
 External funcs. | malloc
-Description | Allocates (with malloc(3)) and returns a copy of
-’s1’ with the characters specified in ’set’ removed
-from the beginning and the end of the string.
+Description | Allocates (with malloc(3)) and returns a copy of ’s1’ with the characters specified in ’set’ removed from the beginning and the end of the string.
 
 **ft_split**
 Function name | ft_split
@@ -100,10 +96,7 @@ Turn in files | -
 Parameters | s: The string to be split and c: The delimiter character
 Return value | The array of new strings resulting from the split or NULL if the allocation fails.
 External funcs. | malloc, free
-Description | Allocates (with malloc(3)) and returns an array
-of strings obtained by splitting ’s’ using the
-character ’c’ as a delimiter. The array must end
-with a NULL pointer.
+Description | Allocates (with malloc(3)) and returns an array of strings obtained by splitting ’s’ using the character ’c’ as a delimiter. The array must end with a NULL pointer.
 
 **ft_itoa**
 Function name | ft_itoa
@@ -113,9 +106,7 @@ Turn in files | -
 Parameters | n: the integer to convert.
 Return value | The string representing the integer or NULL if the allocation fails.
 External funcs. | malloc
-Description | Allocates (with malloc(3)) and returns a string
-representing the integer received as an argument.
-Negative numbers must be handled.
+Description | Allocates (with malloc(3)) and returns a string representing the integer received as an argument. Negative numbers must be handled.
 
 **ft_strmapi**
 Function name | ft_strmapi
