@@ -118,10 +118,7 @@ Parameters | s: The string on which to iterate and f: The function to apply on e
 Return value | The string created from the successive applications
 of 'f' or NULL if the allocation fails.
 External funcs. | malloc
-Description | Applies the function ’f’ to each character of the
-string ’s’, and passing its index as first argument
-to create a new string (with malloc(3)) resulting
-from successive applications of ’f’.
+Description | Applies the function ’f’ to each character of the string ’s’, and passing its index as first argument to create a new string (with malloc(3)) resulting from successive applications of ’f’.
 
 **ft_striteri**
 Function name | ft_striteri
@@ -132,10 +129,7 @@ Turn in files | -
 Parameters | s: The string on which to iterate and f: The function to apply on each character
 Return value | None
 External funcs. | None
-Description | Applies the function ’f’ on each character of
-the string passed as argument, passing its index
-as first argument. Each character is passed by
-address to ’f’ to be modified if necessary.
+Description | Applies the function ’f’ on each character of the string passed as argument, passing its index as first argument. Each character is passed by address to ’f’ to be modified if necessary.
 
 **ft_putchar_fd**
 Function name | ft_putchar_fd
@@ -145,8 +139,7 @@ Turn in files | -
 Parameters | c: The character to output and fdL The file descriptor on which to write.
 Return value | None
 External funcs. | write
-Description | Outputs the character ’c’ to the given file
-descriptor.
+Description | Outputs the character ’c’ to the given file descriptor.
 
 **ft_putstr_fd**
 Function name | ft_putstr_fd
@@ -156,8 +149,7 @@ Turn in files | -
 Parameters | s: The string to output and fd: The file descriptor on which to write.
 Return value | None
 External funcs. | write
-Description | Outputs the string ’s’ to the given file
-descriptor.
+Description | Outputs the string ’s’ to the given file descriptor.
 
 **ft_putendl_fd**
 Function name | ft_putendl_fd
@@ -167,8 +159,7 @@ Turn in files | -
 Parameters | s: The string to output and fd: The file descriptor on which to write.
 Return value | None
 External funcs. | write
-Description | Outputs the integer ’n’ to the given file
-descriptor.
+Description | Outputs the integer ’n’ to the given file descriptor.
 
 **ft_putnbr_fd**
 Function name | ft_putnbr_fd
@@ -178,8 +169,7 @@ Turn in files | -
 Parameters | s: The string to output and fd: The file descriptor on which to write.
 Return value | None
 External funcs. | write
-Description | Outputs the integer ’n’ to the given file
-descriptor.
+Description | Outputs the integer ’n’ to the given file descriptor.
 </details>
 
 ## Bonus part
@@ -215,10 +205,7 @@ Turn in files | -
 Parameters | content: The content to create the node with.
 Return value | The new node
 External funcs. | malloc
-Description | Allocates (with malloc(3)) and returns a new node.
-The member variable ’content’ is initialized with
-the value of the parameter ’content’. The variable
-’next’ is initialized to NULL.
+Description | Allocates (with malloc(3)) and returns a new node. The member variable ’content’ is initialized with the value of the parameter ’content’. The variable ’next’ is initialized to NULL.
 
 **ft_lstadd_front**
 Function name | ft_lstadd_front
@@ -272,10 +259,7 @@ Turn in files | -
 Parameters | lst: The node to free and del: The address of the function used to delete the content.
 Return value | None
 External funcs. | free
-Description | Takes as a parameter a node and frees the memory of
-the node’s content using the function ’del’ given
-as a parameter and free the node. The memory of
-’next’ must not be freed.
+Description | Takes as a parameter a node and frees the memory of the node’s content using the function ’del’ given as a parameter and free the node. The memory of ’next’ must not be freed.
 
 **ft_lstclear**
 Function name | ft_lstclear
@@ -286,10 +270,7 @@ Turn in files | -
 Parameters | lst: The address of a pointer to a node and del: The address of the function used to delete the content of the node.
 Return value | None
 External funcs. | free
-Description | Deletes and frees the given node and every
-successor of that node, using the function ’del’
-and free. Finally, the pointer to the list must be set to
-NULL.
+Description | Deletes and frees the given node and every successor of that node, using the function ’del’and free. Finally, the pointer to the list must be set to NULL.
 
 **ft_lstiter**
 Function name | ft_lstiter
@@ -300,8 +281,7 @@ Parameters | st: The address of a pointer to a node and f: The address of the fu
 the list.
 Return value | None
 External funcs. | None
-Description | Iterates the list ’lst’ and applies the function
-’f’ on the content of each node.
+Description | Iterates the list ’lst’ and applies the function ’f’ on the content of each node.
 
 **ft_lstmap**
 Function name | ft_lstmap
