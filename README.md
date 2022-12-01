@@ -115,8 +115,7 @@ Prototype | char *ft_strmapi(char const *s, char (*f)(unsigned
 int, char));
 Turn in files | -
 Parameters | s: The string on which to iterate and f: The function to apply on each character.
-Return value | The string created from the successive applications
-of 'f' or NULL if the allocation fails.
+Return value | The string created from the successive applications of 'f' or NULL if the allocation fails.
 External funcs. | malloc
 Description | Applies the function ’f’ to each character of the string ’s’, and passing its index as first argument to create a new string (with malloc(3)) resulting from successive applications of ’f’.
 
@@ -212,8 +211,7 @@ Function name | ft_lstadd_front
 | :--- | :---
 Prototype | void ft_lstadd_front(t_list **lst, t_list *new);
 Turn in files | -
-Parameters | lst: The address of a pointer to the first link of
-a list and new: The address of a pointer to the node to be added to the list.
+Parameters | lst: The address of a pointer to the first link of a list and new: The address of a pointer to the node to be added to the list.
 Return value | None
 External funcs. | None
 Description | Adds the node 'new' at the beginning of the list.
@@ -243,16 +241,14 @@ Function name | ft_lstadd_back
 | :--- | :---
 Prototype | void ft_lstadd_back(t_list **lst, t_list *new);
 Turn in files | -
-Parameters | lst: The address of a pointer to the first link of
-a list and new: The address of a pointer to the node to be
-added to the list.
+Parameters | lst: The address of a pointer to the first link of a list and new: The address of a pointer to the node to be added to the list.
 Return value | None
 External funcs. | None
 Description | Adds the node 'new' at the end of the list.
 
 **ft_lstdelone**
 Function name | 
-| :--- | :---
+| :--- | :--- | :---
 Prototype | void ft_lstdelone(t_list *lst, void (*del)(void
 *));
 Turn in files | -
@@ -277,8 +273,7 @@ Function name | ft_lstiter
 | :--- | :---
 Prototype | void ft_lstiter(t_list *lst, void (*f)(void *));
 Turn in files | -
-Parameters | st: The address of a pointer to a node and f: The address of the function used to iterate on
-the list.
+Parameters | st: The address of a pointer to a node and f: The address of the function used to iterate on the list.
 Return value | None
 External funcs. | None
 Description | Iterates the list ’lst’ and applies the function ’f’ on the content of each node.
@@ -286,8 +281,7 @@ Description | Iterates the list ’lst’ and applies the function ’f’ on th
 **ft_lstmap**
 Function name | ft_lstmap
 | :--- | :---
-Prototype | t_list *ft_lstmap(t_list *lst, void *(*f)(void *),
-void (*del)(void *));
+Prototype | t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 Turn in files | -
 Parameters | lst: The address of a pointer to a node, f: The address of the function used to iterate on the list and del: The address of the function used to delete the content of a node if needed.
 Return value | The new list or NULL if the allocation fails.
